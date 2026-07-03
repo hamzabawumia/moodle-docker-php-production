@@ -34,7 +34,8 @@ services:
         MOODLE_ADMIN_PASS: MoodleAdmin123!
         MOODLE_ADMIN_EMAIL: admin@example.com
     ports:
-      - "80:80"
+      # HOST_PORT:CONTAINER_PORT
+      - "8083:80"
     depends_on:
       - db
       - memcached
