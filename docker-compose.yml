@@ -40,7 +40,7 @@ services:
       - db
       - memcached
     environment:
-      MOODLE_URL: http://localhost
+      MOODLE_URL: http://localhost:8083
       DB_HOST: db
       DB_TYPE: pgsql
       DB_NAME: moodle
