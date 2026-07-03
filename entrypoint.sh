@@ -548,6 +548,10 @@ fi
 # ----------------------------------------------------------------------
 # 5. Final Permissions & Web Server
 # ----------------------------------------------------------------------
+mkdir -p "$MOODLE_DATA"
+mkdir -p "$CODE_CACHE_DIR"
+mkdir -p "$PLUGIN_CACHE_ROOT"
+
 echo ">>> Finalizing permissions..."
 chmod -R 750 "$MOODLE_DIR"
 chmod -R 700 "$MOODLE_DATA"
