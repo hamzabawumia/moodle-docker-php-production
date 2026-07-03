@@ -1,0 +1,17 @@
+Edit the entrypoint.ssh file @ line 551 add this 
+
+mkdir -p "$CODE_CACHE_DIR"
+mkdir -p "$PLUGIN_CACHE_ROOT"
+
+Hence that final section will look like so:
+-------------------------------------------
+
+mkdir -p "$CODE_CACHE_DIR"
+mkdir -p "$PLUGIN_CACHE_ROOT"
+
+echo ">>> Finalizing permissions..."
+chmod -R 750 "$MOODLE_DIR"
+chmod -R 700 "$MOODLE_DATA"
+chown -R root:www-data "$MOODLE_DIR"
+chown -R www-data:www-data "$MOODLE_DATA"
+chown -R root:root "$CODE_CACHE_DIR" "$PLUGIN_CACHE_ROOT"
