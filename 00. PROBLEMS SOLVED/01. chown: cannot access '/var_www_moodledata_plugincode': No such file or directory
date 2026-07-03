@@ -1,0 +1,3 @@
+Create the said directory:
+
+sudo mkdir -p /var/www/moodledata/plugincode
